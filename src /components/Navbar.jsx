@@ -1,15 +1,22 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
 
-export default function Navbar() {
+const Navbar = () => {
   return (
-    <nav className="bg-gray-900 text-white px-6 py-4 flex justify-between items-center">
-      <div className="text-xl font-bold">Renderbloom</div>
-      <div className="space-x-6">
-        <Link to="/" className="hover:text-gray-400">Home</Link>
-        <Link to="/services" className="hover:text-gray-400">Services</Link>
-        <Link to="/about" className="hover:text-gray-400">About</Link>
-        <Link to="/contact" className="hover:text-gray-400">Contact</Link>
+    <header className="bg-white shadow-md sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <h1 className="text-2xl font-bold text-gray-900">Renderbloom</h1>
+        <nav>
+          <ul className="flex space-x-6 text-gray-700 font-medium">
+            <li><a href="#home" className="hover:text-blue-600">Home</a></li>
+            <li><a href="#services" className="hover:text-blue-600">Services</a></li>
+            <li><a href="#portfolio" className="hover:text-blue-600">Portfolio</a></li>
+            <li><a href="#about" className="hover:text-blue-600">About</a></li>
+            <li><a href="#contact" className="hover:text-blue-600">Contact</a></li>
+          </ul>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
-}
+};
+
+export default Navbar;
